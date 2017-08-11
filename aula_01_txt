@@ -1,15 +1,25 @@
 # Aula_01_respostas
 
 1. O que são sistemas embarcados?
-R - Sistemas embarcados são sistemas dedicados a um dado sistema, sistema esse bastante específico.
+R - Sistemas embarcados são circuitos dedicados a um dado sistema, sistema esse bastante específico, fazendo com que o circuito 
+projetado tenha uma função específica. Realiza um conjunto de tarefas predefinidas,com requisitos específicos. 
 
 2. O que são sistemas microprocesssados?
+R - São sistemas que comportam componentes e dispositivos que podem ser controlados eletronicamente, de tal modo que  possível 
+controlar os dados manipulados pela execução de um software.
 
 3. Apresente aplicações de sistemas embarcados:
+
 	(a) Para a indústria automotiva;
+	Dispositivos de navegação, como GPS, de segurança,como alarmes e travas, controle de traço e sistemas de entretenimento 
 	(b) Para eletrodomésticos;
+	Dispositivos com lógicas associadas a cada parte de uma geladeira smart, como produção automatizada de gelo.
 	(c) Para automação industrial.
+	Dispositivos de alta performance inteligente, como computadores industriais e robôs industriais.
 
 4. Cite arquiteturas possíveis e as diferenças entre elas.
-
+Arquiteturas possiveis são o Arduino e a MSP430. Além da maior portabilidade do sistema, a forma paralela e serial o qual 
+trabalha auxilia bastante o projeto.
 5. Por que usamos o MSP430 na disciplina, ao invés de outro microcontrolador?
+A MSP430 possui como vantagens de operação a redução do números de bits de memória para processar um determinado projeto, além 
+de que, por ser Ultra Low Power, a MSP consumirá menos energia para execução do projeto.
