@@ -1,0 +1,59 @@
+Dada uma variável a do tipo char (um byte), escreva os trechos de código em C para: 
+(a) Somente setar o bit menos significativo de a. 
+
+#define menos_sig(BIT0)
+char a;
+{a|= menos_sig};
+   
+(b) Somente setar dois bits de a: o menos significativo e o segundo menos significativo.
+
+#define dois_menos_sig(BIT0+BIT1)
+char a;
+{a|= dois_menos_sig};
+
+(c) Somente zerar o terceiro bit menos significativo de a. 
+
+#define terc_menos(BIT2)
+char a;
+{a &= terc_menos};
+
+(d) Somente zerar o terceiro e o quarto bits menos significativo de a.
+
+#define terc_e_qua_menos(BIT2+BIT3)
+char a;
+{a &= terc_e_qua_menos};
+
+(e) Somente inverter o bit mais significativo de a.
+
+#define inver(BIT7)
+char a;
+{a ^= inver};
+
+(f) Inverter o nibble mais significativo de a, e setar o nibble menos significativo de a.
+ 
+ #define nibble_up(BIT7+BIT6+BIT5+BIT4)
+ #define nibble_down(BIT3+BIT2+BIT1+BIT0)
+   
+ void main(void){
+ WDTCTL = WDTPW|WDTHOLD;
+ char a;
+	  	
+ while(1){
+	
+	  (a ^= nibble_down) && (a |= nibble_up); 
+		
+    }
+return 0;	
+	}
+
+
+Considerando a placa Launchpad do MSP430, escreva o código em C para piscar os dois LEDs ininterruptamente.
+
+Considerando a placa Launchpad do MSP430, escreva o código em C para piscar duas vezes os dois LEDs sempre que o usuário
+pressionar o botão.
+
+Considerando a placa Launchpad do MSP430, faça uma função em C que pisca os dois LEDs uma vez.
+
+Reescreva o código da questão 2 usando a função da questão 4.
+
+Reescreva o código da questão 3 usando a função da questão 4.
