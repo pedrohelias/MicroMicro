@@ -16,7 +16,7 @@ if(i>j) f = g+h+10;
 else f = g-h-10;
 
 cmp R8,R7 
-
+```C
 
 "Traduza" o seguinte trecho de código em C para o assembly do MSP430:
 while(save[i]!=k) i++;
