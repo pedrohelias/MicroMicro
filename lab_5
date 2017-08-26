@@ -15,13 +15,18 @@ Escreva os trechos de código assembly do MSP430 para: (a) Somente setar o bit m
 if(i>j) f = g+h+10;
 else f = g-h-10;
 
-cmp R8,R7 
-
-add.w R5,R6
-add.w #10.R6
-mov.w R6, R12
-mov.w R12,R4
-
+              cmp R8,R7 
+              jl label_if
+label_else    add.w R5,R6
+              add.w #10,R6
+              mov.w R6,R12
+              mov.w R12,R4
+              EXIT;
+label_if      sub.w R5,R6
+              sub #10,R6
+              mov.w R6,R12
+              mov.w R12,R4
+              EXIT;
 
 
 "Traduza" o seguinte trecho de código em C para o assembly do MSP430:
