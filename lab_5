@@ -38,15 +38,43 @@ label_if      sub.w R5,R6
 while(save[i]!=k) i++;
               
               mov.w #k,R11
-              cmp R7,R11
+compara       cmp R7,R11
               jne looping
               EXIT;
 looping       inc.w R11
-              
+              jmp compara
               
 
 "Traduza" o seguinte trecho de código em C para o assembly do MSP430:
 for(i=0; i<100; i++) A[i] = i*2;
 
+comp        cmp #100,R11
+            jl final
+            inc.w R7
+            mov.w R7,R11
+            rla.w R7
+            rla.w R7
+            mov.w R7,A
+            inc.w R11
+            jmp comp
+final       EXIT
+
+
 "Traduza" o seguinte trecho de código em C para o assembly do MSP430:
 for(i=99; i>=0; i--) A[i] = i*2;
+
+comp        cmp R11,0
+            jl final
+            dec.w R7
+            mov.w R7,R11
+            rla.w R7
+            rla.w R7
+            mov.w R7,A
+            dec.w R11
+            jmp comp
+final       EXIT
+
+
+
+
+
